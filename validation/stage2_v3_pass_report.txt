@@ -1,0 +1,39 @@
+CC PUBLIC CODE - STAGE 2 SYNTHETIC GROUP TEST
+STATUS: PASS
+MATLAB: 26.1.0.3312084 (R2026a) Update 4
+PACKAGE: stage2-v3
+Only newly generated artificial SUMMARY tables are analysed.
+These tables are not patient data or outputs of the stage-1 EDF demo.
+This is not a reproduction of the 32-patient clinical results.
+PRODUCT: MATLAB | 26.1
+PRODUCT: Statistics and Machine Learning Toolbox | 26.1
+PASS: package checksums and function resolution
+PASS: small-example grouping, patient-first normalization and strict key/value checks
+EMPTY_VECTOR_PROBE: logical=[0 1]; bracket=[0 0]; direct_equal=0; column_equal=1
+PASS: selection boundary tests (10 synthetic groups), empty-vector shape handling and rejection of wrong times/counts
+PASS: key uniqueness, missing/nonfinite rejection, patient-first normalization
+PASS: Pre/Post selection limits and explicit fictional post-selection exclusion without refill
+FIXTURE: 24 fictional subjects; no clinical counts used as targets
+PASS: all eight complementary metrics cover identical primary-selected keys
+SYNTHETIC COUNTS: candidate rows=3960; selected after fictional exclusion=3370; regional rows=469
+PASS: Primary synthetic model and explicit DF checks
+PASS: Region synthetic model and explicit DF checks
+PASS: Exact synthetic model and explicit DF checks
+PASS: 15 regional contrast construction and Holm adjustment invariants
+PASS: dwPLI synthetic ML model and Satterthwaite contrasts
+PASS: Delta synthetic ML model and Satterthwaite contrasts
+PASS: Theta synthetic ML model and Satterthwaite contrasts
+PASS: Alpha synthetic ML model and Satterthwaite contrasts
+PASS: Beta synthetic ML model and Satterthwaite contrasts
+PASS: RMS synthetic ML model and Satterthwaite contrasts
+PASS: Power1_40 synthetic ML model and Satterthwaite contrasts
+PASS: RelativePower4_13 synthetic ML model and Satterthwaite contrasts
+PASS: artificial State x FrequencyBand model
+PASS: 10000 paired-patient bootstrap replicates per contrast; pairing, mean differences, RNG restoration
+Bootstrap inference is descriptive test output only; no clinical or significance target was imposed.
+PASS: primary/exact-time source separation; selective within-source subset and incomplete-pair handling
+NOT TESTED: 1000/2000-Hz EDFs; this stage has no EDF input.
+NOT TESTED: real-cohort exclusions or private manifest; real-cohort numerical output equivalence.
+NOT TESTED: LOO, refitted patient-cluster bootstrap, modifier LMMs, clinical rank tests, outcome eligibility, figure export.
+No expected clinical WTC means, F statistics, P values or patient counts were used as test targets.
+Passing checks does not establish biological validity or complete manuscript reproducibility.

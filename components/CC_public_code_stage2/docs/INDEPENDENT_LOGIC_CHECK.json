@@ -1,0 +1,13 @@
+{
+  "environment": "Python; independent count/time logic only, not MATLAB execution",
+  "boundary_groups_checked": 10,
+  "intentionally_wrong_selections_rejected": 3,
+  "full_fixture_groups_checked": 480,
+  "candidate_rows": 3960,
+  "selected_rows_before_fictional_exclusion": 3380,
+  "selected_rows_after_fictional_exclusion": 3370,
+  "regional_groups_after_exclusion": 469,
+  "matlab_runtime_tested": false,
+  "matlab_array_shape_probe_tested": false,
+  "LMM_bootstrap_tested": false
+}

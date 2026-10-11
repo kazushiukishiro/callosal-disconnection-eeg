@@ -1,0 +1,11 @@
+CC PUBLIC CODE - STAGE 2 SYNTHETIC GROUP TEST
+STATUS: FAIL
+MATLAB: 26.1.0.3312084 (R2026a) Update 4
+Only newly generated artificial SUMMARY tables are analysed.
+These tables are not patient data or outputs of the stage-1 EDF demo.
+This is not a reproduction of the 32-patient clinical results.
+PRODUCT: MATLAB | 26.1
+PRODUCT: Statistics and Machine Learning Toolbox | 26.1
+PASS: package checksums and function resolution
+FAILED_STAGE: selection and normalization unit tests
+ERROR_IDENTIFIER: CCGroupDemo:Selection

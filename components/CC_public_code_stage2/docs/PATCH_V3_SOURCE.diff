@@ -1,0 +1,132 @@
+--- v2/run_synthetic_group_demo.m
++++ v3/run_synthetic_group_demo.m
+@@ -16,7 +16,7 @@
+ report=fullfile(outDir,'SHARE_STAGE2_REPORT.txt');
+ local=fullfile(outDir,'LOCAL_DIAGNOSTICS.txt');
+ log={'CC PUBLIC CODE - STAGE 2 SYNTHETIC GROUP TEST';'STATUS: RUNNING'; ...
+-    ['MATLAB: ' version]; ...
++    ['MATLAB: ' version]; 'PACKAGE: stage2-v3'; ...
+     'Only newly generated artificial SUMMARY tables are analysed.'; ...
+     'These tables are not patient data or outputs of the stage-1 EDF demo.'; ...
+     'This is not a reproduction of the 32-patient clinical results.'};
+@@ -42,6 +42,18 @@
+     fprintf('[1/5] Checking selection, matching and normalization interfaces...\n');
+     stage='selection and normalization unit tests';
+     checkSmallExamples();
++    log{end+1,1}='PASS: small-example grouping, patient-first normalization and strict key/value checks';
++    % Record the two empty-array shapes instead of inferring them from a FAIL.
++    probe=(1:3)';emptyLogical=probe(false(3,1));emptyBracket=probe([]);
++    log{end+1,1}=sprintf( ...
++        'EMPTY_VECTOR_PROBE: logical=%s; bracket=%s; direct_equal=%d; column_equal=%d', ...
++        mat2str(size(emptyLogical)),mat2str(size(emptyBracket)), ...
++        isequal(emptyLogical,emptyBracket),sameStartTimes(emptyLogical,emptyBracket));
++    stage='selection boundary regression tests';
++    checkSelectionEdges();
++    log{end+1,1}='PASS: selection boundary tests (10 synthetic groups), empty-vector shape handling and rejection of wrong times/counts';
++    writeLines(report,log);
++    stage='synthetic fixture creation';
+     F=cc_synthetic_group_fixture();E=F.Epochs;
+     P0=cc_public_group_ops('select_primary',E,F.Rules);
+     % Explicit synthetic regional exclusion AFTER selection. No refill.
+@@ -50,6 +62,7 @@
+     assert(nnz(bad)==F.Rules.PreMin,'CCGroupDemo:FictionalExclusion', ...
+         'Fictional regional exclusion did not cover the selected group.');
+     P=P0(~bad,:);
++    stage='synthetic fixture selection verification';
+     verifySelection(E,P0,F.Rules);
+     log{end+1,1}='PASS: key uniqueness, missing/nonfinite rejection, patient-first normalization';
+     log{end+1,1}='PASS: Pre/Post selection limits and explicit fictional post-selection exclusion without refill';
+@@ -210,6 +223,16 @@
+     log{2}='STATUS: FAIL';
+     log{end+1,1}=['FAILED_STAGE: ' stage];
+     log{end+1,1}=['ERROR_IDENTIFIER: ' ME.identifier];
++    % Only this internally generated selection message is copied to the share
++    % report; arbitrary exception messages and absolute paths remain local.
++    if strcmp(ME.identifier,'CCGroupDemo:Selection')
++        log{end+1,1}=['SELECTION_DETAIL: ' ME.message];
++    end
++    for j=1:min(5,numel(ME.stack))
++        [~,baseName,ext]=fileparts(ME.stack(j).file);
++        log{end+1,1}=sprintf('ERROR_LOCATION: %s%s | line %d', ...
++            baseName,ext,ME.stack(j).line);
++    end
+     writeLines(report,log);
+     localLog{end+1,1}=getReport(ME,'extended','hyperlinks','off');
+     writeLines(local,localLog);
+@@ -256,9 +279,73 @@
+         if numel(a)<rules.PostMin,a=[];else,[~,i]=sort(E.StartSec(a));a=a(i(1:min(rules.PostMax,numel(i))));end
+     end
+     got=P.StartSec(P.CaseNo==c(j)&P.State==s(j)&P.Region==r(j));
+-    assert(isequal(sort(got),sort(E.StartSec(a))), ...
+-        'CCGroupDemo:Selection','Selected times differ from declared rule.');
+-end
++    expected=E.StartSec(a);
++    % Compare the selected times, not the orientation of an empty index.
++    % Do not use unique(): duplicated times or a changed count must still fail.
++    assert(sameStartTimes(got,expected), ...
++        'CCGroupDemo:Selection', ...
++        ['Case=%s; State=%s; Region=%s; actual_n=%d; expected_n=%d; ' ...
++         'actual_shape=%s; expected_shape=%s; actual_times=%s; expected_times=%s'], ...
++        char(c(j)),char(s(j)),char(r(j)),numel(got),numel(expected), ...
++        mat2str(size(got)),mat2str(size(expected)), ...
++        mat2str(sort(got(:))'),mat2str(sort(expected(:))'));
++
++end
++end
++function tf=sameStartTimes(a,b)
++% Compare finite epoch start-time lists independent of row/column shape.
++% Sorting was already part of the v2 test; (:) also handles 0-by-0 vs 0-by-1.
++% This is test code only. The primary selector and its thresholds are unchanged.
++tf=isequal(sort(a(:)),sort(b(:)));
++end
++function checkSelectionEdges()
++% Deterministic test cases for zero-selection groups and exact boundaries.
++% These are new artificial test inputs, not clinical data or study targets.
++assert(sameStartTimes(zeros(0,1),[]),'CCGroupDemo:EmptyShape', ...
++    'Empty selected-time lists should compare equal after column conversion.');
++assert(sameStartTimes([60 30],[30;60]),'CCGroupDemo:VectorShape', ...
++    'Non-empty selected-time lists should be shape-independent.');
++assert(~sameStartTimes([],30)&&~sameStartTimes([30 60],[30 90])&& ...
++    ~sameStartTimes([30 30],30),'CCGroupDemo:StrictTimeComparison', ...
++    'Count, time or multiplicity mismatches must not be accepted.');
++states=["Pre","Pre","Pre","Post","Post","Post", ...
++    "Anterior","Posterior","Pre","Post"];
++starts={0:30:240,0:30:270,0:30:330,750:30:780,750:30:810, ...
++    750:30:1080,360:30:450,480:30:600,0:30:330,750:30:870};
++expected={[],0:30:270,60:30:330,[],750:30:810,750:30:1020, ...
++    [360 420 450],[480 510 570 600],[],[750 810 840]};
++rows=cell(0,6);
++for c=1:numel(states)
++    for k=1:numel(starts{c})
++        bad=(c==7&&k==2)||(c==9&&k<=3)||(c==10&&ismember(k,[2 5]));
++        value=0.5;
++        if c==8&&k==3,value=NaN;end
++        rows(end+1,:)={string(920000+c),states(c),"FT",starts{c}(k),bad,value}; %#ok<AGROW>
++    end
++end
++E=cell2table(rows,'VariableNames', ...
++    {'CaseNo','State','Region','StartSec','RegionBad','MeanWTC_4_13'});
++E.CaseNo=string(E.CaseNo);E.State=string(E.State);E.Region=string(E.Region);
++E.RegionBad=logical(E.RegionBad);
++rules=struct('PreMin',10,'PostMin',3,'PostMax',10);
++P=cc_public_group_ops('select_primary',E,rules);
++for c=1:numel(states)
++    got=P.StartSec(P.CaseNo==string(920000+c));
++    assert(sameStartTimes(got,expected{c}),'CCGroupDemo:SelectionBoundary', ...
++        'Artificial boundary case %d selected unexpected times.',c);
++end
++verifySelection(E,P,rules);
++% The repaired verifier must reject a row retained in an under-threshold group.
++B=[P;E(1,:)];
++expectError(@() verifySelection(E,B,rules),'CCGroupDemo:Selection');
++% It must also reject an omitted valid epoch and the wrong temporal priority.
++B=P;B(B.CaseNo=="920002"&B.StartSec==0,:)=[];
++expectError(@() verifySelection(E,B,rules),'CCGroupDemo:Selection');
++B=P;B.StartSec(B.CaseNo=="920003"&B.StartSec==60)=0;
++expectError(@() verifySelection(E,B,rules),'CCGroupDemo:Selection');
++% Infinite WTC is not converted to an empty/valid observation.
++B=E;B.MeanWTC_4_13(1)=Inf;
++expectError(@() cc_public_group_ops('select_primary',B,rules),'CCEpochAudit:WTC');
+ end
+ function Q=checkInference(m,label,n)
+ C=m.Coefficients;

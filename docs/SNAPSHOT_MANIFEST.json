@@ -1,0 +1,272 @@
+{
+  "snapshot": "private-stage12-preparation",
+  "public_release": false,
+  "matlab_source_changed": false,
+  "source_archives": [
+    {
+      "archive_name": "CC_public_code_stage1.zip",
+      "sha256": "262be9461cb74e1f55992f9463d3cbe236f1cac249702b2c2893b76c5db9d111",
+      "bytes": 42375
+    },
+    {
+      "archive_name": "CC_public_code_stage2_v3.zip",
+      "sha256": "6eb1b17ff10444f0b281e4a97eeba177c431a00badee123cedb26fc6ef081d3e",
+      "bytes": 33653
+    }
+  ],
+  "component_files": [
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/README.md",
+      "bundle_path": "components/CC_public_code_stage1/README.md",
+      "sha256": "47378cc0cdba70220595f020e4bd12d053e63f21f9961f2132af85de6600ad14",
+      "bytes": 4501
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/README_JA.txt",
+      "bundle_path": "components/CC_public_code_stage1/README_JA.txt",
+      "sha256": "c6af087e6f43d0f57e57335e44c149c24617a7f61e8cb6a416147249f5c2e39e",
+      "bytes": 2366
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/SHA256SUMS.txt",
+      "bundle_path": "components/CC_public_code_stage1/SHA256SUMS.txt",
+      "sha256": "a3119c915037677faf7c57c3e5c02d9ca24b988fc7c5c2e8dcbdad54d2c31bd2",
+      "bytes": 1442
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/docs/DEPENDENCIES.md",
+      "bundle_path": "components/CC_public_code_stage1/docs/DEPENDENCIES.md",
+      "sha256": "a6e49cbffa8b236484b24b9d3ab5fe5b19220b079e695dc221654b73f3f8262a",
+      "bytes": 1265
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/docs/SOURCE_PROVENANCE.md",
+      "bundle_path": "components/CC_public_code_stage1/docs/SOURCE_PROVENANCE.md",
+      "sha256": "767862a10c26ecfac73765e7cd4afa4618a4f99f7be2e5bfba17c05135af1f47",
+      "bytes": 3458
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/docs/VALIDATION_STATUS.md",
+      "bundle_path": "components/CC_public_code_stage1/docs/VALIDATION_STATUS.md",
+      "sha256": "a5bb038ebfb8597b63500ac5756fd4b49601ff3bc90d8e9c7eac8393e4e40392",
+      "bytes": 2041
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/run_synthetic_demo.m",
+      "bundle_path": "components/CC_public_code_stage1/run_synthetic_demo.m",
+      "sha256": "cbf2db13c4c10f457e18aa5d67131c5c450ddcfd81946a3e1b948a16264152d0",
+      "bytes": 16007
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/src/analyze_cc_case.m",
+      "bundle_path": "components/CC_public_code_stage1/src/analyze_cc_case.m",
+      "sha256": "8670ef6abd956cc4a89ad931383d7bc98b4b0f53ee56e4ca9a4de47a8cdca515",
+      "bytes": 26823
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/src/analyze_cc_case_multiband.m",
+      "bundle_path": "components/CC_public_code_stage1/src/analyze_cc_case_multiband.m",
+      "sha256": "9d51d4e312448c69eb2984168684a04bf5e8db8b28dc7222304fac2f344ecf65",
+      "bytes": 28433
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/src/analyze_cc_case_signalmetrics.m",
+      "bundle_path": "components/CC_public_code_stage1/src/analyze_cc_case_signalmetrics.m",
+      "sha256": "00da559323cecce3362e17aec6a7960e5d247a7ce8a36b9989805925b838d874",
+      "bytes": 28077
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/src/calculate_dwpli.m",
+      "bundle_path": "components/CC_public_code_stage1/src/calculate_dwpli.m",
+      "sha256": "a1d1538e3b930320027c9b27c9dd89fd12df0f9b6afa75a8907a052333008f18",
+      "bytes": 2624
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/src/channel_map.m",
+      "bundle_path": "components/CC_public_code_stage1/src/channel_map.m",
+      "sha256": "e4d2bc65c0e04e4e50b2be5a06b8a3c958a4659e2d82975c9c7fb069fd2b17a0",
+      "bytes": 825
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/src/check_multifile_continuity.m",
+      "bundle_path": "components/CC_public_code_stage1/src/check_multifile_continuity.m",
+      "sha256": "e3b22890f3314e46d2a56dd6bd0cf9a42e96588f7fcad8e91c339e8134c8f752",
+      "bytes": 1591
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/src/load_cc_edf.m",
+      "bundle_path": "components/CC_public_code_stage1/src/load_cc_edf.m",
+      "sha256": "6d11eba1005456ceee7ae537eead0d46235cf7a20a9888884b45496383d668e2",
+      "bytes": 5070
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/tools/cc_demo_configuration.m",
+      "bundle_path": "components/CC_public_code_stage1/tools/cc_demo_configuration.m",
+      "sha256": "43ed19022e0e0060d6425ad505d58af1580aa99cc120254a127d5ab808ce19c9",
+      "bytes": 818
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/tools/cc_demo_make_recording.m",
+      "bundle_path": "components/CC_public_code_stage1/tools/cc_demo_make_recording.m",
+      "sha256": "58b99a2b0da9881c93a450834414760b6c78491966f0548ed48fa243dd58b2d4",
+      "bytes": 1808
+    },
+    {
+      "source_archive": "CC_public_code_stage1.zip",
+      "source_member": "CC_public_code_stage1/tools/cc_demo_write_edf.m",
+      "bundle_path": "components/CC_public_code_stage1/tools/cc_demo_write_edf.m",
+      "sha256": "0b70120ab6331d853d3807afe0b3f2c3f3911bd307ad1adcf3dbba3c19ea71c8",
+      "bytes": 1713
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/README.md",
+      "bundle_path": "components/CC_public_code_stage2/README.md",
+      "sha256": "a22d79ac529ce2e98c3d96a84bd8d809340b60a47455668dc190c2f571efa265",
+      "bytes": 4494
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/README_JA.txt",
+      "bundle_path": "components/CC_public_code_stage2/README_JA.txt",
+      "sha256": "8cce671d1225fb8a07f78426d5911eb7e98cdddcb408c4d20763138dc7ab3680",
+      "bytes": 3224
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/SHA256SUMS.txt",
+      "bundle_path": "components/CC_public_code_stage2/SHA256SUMS.txt",
+      "sha256": "782bc90e45fdadde96fa85330b6605e0098ddcfd4319bfc7eb430ade33205263",
+      "bytes": 1475
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/docs/INDEPENDENT_LOGIC_CHECK.json",
+      "bundle_path": "components/CC_public_code_stage2/docs/INDEPENDENT_LOGIC_CHECK.json",
+      "sha256": "57dfdd48833b81522a6759f3f138dcace29ed7f9770321c8927fad60a0996a7c",
+      "bytes": 488
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/docs/NUMERIC_SOURCE_HASHES.json",
+      "bundle_path": "components/CC_public_code_stage2/docs/NUMERIC_SOURCE_HASHES.json",
+      "sha256": "aae468f781829412e9dfd2b9f558948029b04b894baa739382cdd5ec0e280a60",
+      "bytes": 1859
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/docs/PATCH_V2.md",
+      "bundle_path": "components/CC_public_code_stage2/docs/PATCH_V2.md",
+      "sha256": "54699c9639d4556de33edc5d1c80873ee38ba72da6e50931623242678dff955c",
+      "bytes": 1446
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/docs/PATCH_V3.md",
+      "bundle_path": "components/CC_public_code_stage2/docs/PATCH_V3.md",
+      "sha256": "be9bfeda2fd941f3de4876966c1a10b549822709bac7bf86418dea28fe8cafe2",
+      "bytes": 2722
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/docs/PATCH_V3_SOURCE.diff",
+      "bundle_path": "components/CC_public_code_stage2/docs/PATCH_V3_SOURCE.diff",
+      "sha256": "f3ea77053a19fe41751899aba219249d2f73d8cc3aa0a36f23135b591a098ea9",
+      "bytes": 6965
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/docs/SOURCE_PROVENANCE.md",
+      "bundle_path": "components/CC_public_code_stage2/docs/SOURCE_PROVENANCE.md",
+      "sha256": "3775cbf803ef4c2763db76e29e8b14723fdf88d874ab861fdef69034035652d6",
+      "bytes": 3538
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/docs/VALIDATION_STATUS.md",
+      "bundle_path": "components/CC_public_code_stage2/docs/VALIDATION_STATUS.md",
+      "sha256": "ef3a4cb364d644154c295f4eef9f50e9728afe7f761502a5b25c8e3d166e30f1",
+      "bytes": 1995
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/run_synthetic_group_demo.m",
+      "bundle_path": "components/CC_public_code_stage2/run_synthetic_group_demo.m",
+      "sha256": "8f73f97370989cb4060650a66d142dc130ebfd9c492b0f631cd5bbd917b8e775",
+      "bytes": 24387
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/src/cc_connectivity_change_sources.m",
+      "bundle_path": "components/CC_public_code_stage2/src/cc_connectivity_change_sources.m",
+      "sha256": "a3f1e9401a19dd45851c574c0b141b735d6cc4ecc14a3e5610310a039f895e7b",
+      "bytes": 2639
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/src/cc_public_group_ops.m",
+      "bundle_path": "components/CC_public_code_stage2/src/cc_public_group_ops.m",
+      "sha256": "b9813209cf8fad22d1ff53cee6605c52969854206f423ae97ef3e6cc6b94a858",
+      "bytes": 10857
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/src/cc_regional_contrasts.m",
+      "bundle_path": "components/CC_public_code_stage2/src/cc_regional_contrasts.m",
+      "sha256": "186b508d5e58bbe7c184ba68a229941d291e5eb83a1d12c5ff750396280c38eb",
+      "bytes": 1682
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/src/cc_synthetic_group_fixture.m",
+      "bundle_path": "components/CC_public_code_stage2/src/cc_synthetic_group_fixture.m",
+      "sha256": "0f50c271c48c7de2521444a746474ca0e83c56cb3d9624d5eba31936fd6c650a",
+      "bytes": 3356
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/validation/STAGE1_REPORT.txt",
+      "bundle_path": "components/CC_public_code_stage2/validation/STAGE1_REPORT.txt",
+      "sha256": "0b12eff3aa531fd6698d4527846133c7da9bbc5dbbedf1435eb682f86bfbcb30",
+      "bytes": 1314
+    },
+    {
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "source_member": "CC_public_code_stage2/validation/STAGE2_V2_FAIL_REPORT.txt",
+      "bundle_path": "components/CC_public_code_stage2/validation/STAGE2_V2_FAIL_REPORT.txt",
+      "sha256": "957ba6a45e2e2648c661e4c176357425a1b5ee54a11b74258df372616d018a03",
+      "bytes": 514
+    }
+  ],
+  "latest_author_supplied_runtime_reports": [
+    {
+      "uploaded_filename": "SHARE_DEMO_REPORT.txt",
+      "bundle_path": "validation/stage1_pass_report.txt",
+      "sha256": "0b12eff3aa531fd6698d4527846133c7da9bbc5dbbedf1435eb682f86bfbcb30",
+      "bytes": 1314
+    },
+    {
+      "uploaded_filename": "SHARE_STAGE2_REPORT(1).txt",
+      "bundle_path": "validation/stage2_v3_pass_report.txt",
+      "sha256": "307fa4a62e4c5108c13f2cd680ba4062ac87cdd86e6bed7ded21dd437afaaf2b",
+      "bytes": 2684
+    }
+  ],
+  "evidence_limit": "PASS reports cover synthetic component tests, not clinical or end-to-end reproduction."
+}

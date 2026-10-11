@@ -1,0 +1,22 @@
+CC PUBLIC CODE - STAGE 1 SYNTHETIC TEST
+STATUS: PASS
+MATLAB: 26.1.0.3312084 (R2026a) Update 4
+Only newly generated artificial signals are analysed.
+This is not a reproduction of the 32-patient clinical results.
+PRODUCT: MATLAB | 26.1
+PRODUCT: Signal Processing Toolbox | 26.1
+PRODUCT: Wavelet Toolbox | 26.1
+PASS: package checksums and function resolution
+PASS: synthetic EDF small-overlap trimming and positive-gap preservation
+PASS: dwPLI missing values, short input, zero denominator, unequal lengths and symmetry
+PASS: two artificial EDFs with fixed fictional headers
+FIXTURE: 500 Hz, 630 s, 16 channels, event offsets 330/360/390 s
+PASS: primary WTC / dwPLI / exact-time | 73.5 s
+SYNTHETIC COUNTS: epoch-region=85; selected=80; summaries=20; exact times=16
+PASS: multiband calculations and common-output agreement | 71.0 s
+PASS: signal metrics and common-output agreement | 69.6 s
+PASS: synthetic-only summary export
+NOT TESTED: 1000/2000-Hz input, all possible artefacts or missing-data patterns.
+NOT TESTED: final cohort technical exclusions, cohort-level matching, LMMs, bootstrap or clinical analyses.
+No expected clinical WTC means, F statistics, P values or patient counts were used as test targets.
+Passing this smoke test does not establish biological validity or complete manuscript reproducibility.

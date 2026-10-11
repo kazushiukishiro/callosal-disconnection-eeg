@@ -1,0 +1,25 @@
+{
+  "source_file": "run_cc_matched_epoch_sensitivity.m",
+  "source_sha256": "d8f919bd1581c748fb5ea2292aa26d3a847db49ae7e3eeae61bdacb0cbbb3a4f",
+  "extracted_helper_hashes": {
+    "valueEpochs": "71c68ec59d97a9a23bee49b710b64015aadfb830433dcb731ca387cfb05f8432",
+    "alignToPrimary": "f905a2f1ecb387adf3cfc7dd33e39783ba772393eb8b3bfe26de25a79e31ee38",
+    "patientValues": "7fae4ab6f7e8e47956e09d7770a3f2845be6ac3daaa013126570414f0770dc27",
+    "describeValues": "3714fcbbc519b49d3af9045b0d42bd9a28ce5853f658f0dd7db5cf50be86e410",
+    "moments": "cde316d6a28cc3fe5ee5c4611fedafc587bd137ef5dfe3ae1beebb684f5056bd",
+    "modelTable": "e63ab30744e9a61fa880b4d7a4b53c606c532c92080529ef7e3ca7dae5c896cd",
+    "omnibusTable": "3bc0a5198caee7549c43fc1e8c6e1fec9bdfe97fa0185a2a8b1d3ae498c4548b",
+    "lmmContrasts": "787d41402ddaf2c3bce555fc7c40c65c12f2ded3199aaf4b82350c608e6e34fb",
+    "bootstrapContrasts": "7081f2f36b2dc012111e859cff6410bc633709aaac6b5494d591566f3442f809",
+    "contrastTable": "87159be334238bec5c5fce653435eb3aae4a804132bec91ec5787b1e464dc9c5",
+    "canonicalEpochs": "6386cdccfe42014b31b4332e149e739b29a2ff6a0d3a2c09264f80fd91663ce5",
+    "canonicalGroups": "0b9d6642e04c89135a5b2f31be295767375775180d6d15a869d5034ad07c8b2f",
+    "epochKey": "6226a2f01c95cea1505542d03e644c267428e2fa307a210f42ffc7b828c3831e",
+    "groupKey": "2ae081ec071bb82137214ccf8c1c636ec1d212adbfce5333866f1e044f072374",
+    "selectPrimary": "f4948bfd190ce3be0da4288cb2b18e6197fe549b26a852a500e624aa29e1dc1c",
+    "groupedValues": "c77ab10a06160e2cb98aadaccbaa16f92f154400b038461fe526b62204499d96",
+    "appendTable": "040492cdc96ecc1d656e9718a0ba4e02dcbb6fcca132baabf35dda3d50942deb",
+    "requireColumns": "640b173819741204edb91925695147c5a3d5da7eb520862ef456cfd6b122ad63",
+    "requireNumeric": "af39b7ae465f2974dd5dce24639a69d832200d225a98d9e68dc9a4ed699492be"
+  }
+}
