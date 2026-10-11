@@ -1,0 +1,25 @@
+CC PUBLIC CODE - STAGE 3 SYNTHETIC SENSITIVITY TEST
+STATUS: PASS
+MATLAB: 26.1.0.3312084 (R2026a) Update 4
+PACKAGE: stage3-sensitivity-v2
+New callable wrappers, not byte-identical historical analysis scripts.
+Only freshly generated artificial summary tables are analysed.
+Not an EDF-to-cohort or real-cohort numerical reproduction.
+BOOTSTRAP TEST: 50 resamples; not the 2000-resample default study-code run.
+PASS: package integrity and explicit function resolution
+PASS: natural-log call in the report-writing workspace
+FIXTURE: 24 fictional subjects; 469 regional and 190 exact-time summaries
+PASS: boundary transform, duplicate rejection, missing-pair rejection
+PASS: repeated patients preserve all rows but receive distinct bootstrap cluster IDs
+PASS: logit transform/model interface; explicit Satterthwaite F and Residual coefficients
+PASS: 72 leave-one-out fits; case/observation deletion checked independently
+No direction or significance threshold was used as a pass criterion.
+BOOTSTRAP: requested=50; primary successful=50; exact successful=50
+BOOTSTRAP REVIEW COUNTS: failed fits=0; fits with recorded warnings=0; baseline warnings=0
+PASS: bootstrap draws, paired model sampling, percentile construction, failure accounting and RNG restoration
+The short-test percentile intervals are not reported manuscript confidence intervals.
+Warning monitoring records the last warning per fit/test; warnings are not suppressed.
+NOT TESTED: full 2000-resample run, native-rate EDFs, clinical modifiers/rank tests, figure export.
+NOT TESTED: real-cohort exclusions, original-versus-wrapper clinical numerical equivalence.
+No patient files or expected clinical effect sizes, P values or sample counts were used.
+A PASS is bounded software-test evidence, not complete manuscript reproducibility.

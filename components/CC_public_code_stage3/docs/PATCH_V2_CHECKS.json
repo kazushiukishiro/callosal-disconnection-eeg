@@ -1,0 +1,33 @@
+{
+  "package": "stage3-sensitivity-v2",
+  "source_zip_sha256": "4a3c9731402e6c277d69d2f65a4ab7ec670c28045a587dd8ce68e65f396bc372",
+  "changed_matlab_files": [
+    "run_synthetic_sensitivity_demo.m"
+  ],
+  "unchanged_matlab_files": [
+    {
+      "file": "src/cc_wtc_sensitivity.m",
+      "byte_identical_to_v1": true,
+      "sha256": "2489f2462f752ed948d8b3831bb17977814bfa740c0a373f887200d26d327307"
+    },
+    {
+      "file": "dependencies/cc_public_group_ops.m",
+      "byte_identical_to_v1": true,
+      "sha256": "b9813209cf8fad22d1ff53cee6605c52969854206f423ae97ef3e6cc6b94a858"
+    },
+    {
+      "file": "dependencies/cc_synthetic_group_fixture.m",
+      "byte_identical_to_v1": true,
+      "sha256": "0f50c271c48c7de2521444a746474ca0e83c56cb3d9624d5eba31936fd6c650a"
+    }
+  ],
+  "report_buffer_renamed": "log -> reportLines",
+  "rename_and_instrumentation_reversible_to_v1_exactly": true,
+  "existing_numeric_log_calls_retained": true,
+  "additional_same_workspace_log_probe": true,
+  "additional_output_verification_stage_label": true,
+  "matlab_runtime_executed": false,
+  "matlab_parser_or_code_analyzer_executed": false,
+  "matlab_runtime_validation_status": "pending",
+  "original_clinical_or_synthetic_results_modified": false
+}

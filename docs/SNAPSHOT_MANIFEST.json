@@ -1,5 +1,5 @@
 {
-  "snapshot": "private-stage12-preparation",
+  "snapshot": "private-stage123-preparation",
   "public_release": false,
   "matlab_source_changed": false,
   "source_archives": [
@@ -12,6 +12,11 @@
       "archive_name": "CC_public_code_stage2_v3.zip",
       "sha256": "6eb1b17ff10444f0b281e4a97eeba177c431a00badee123cedb26fc6ef081d3e",
       "bytes": 33653
+    },
+    {
+      "archive_name": "CC_public_code_stage3_sensitivity_v2.zip",
+      "sha256": "94f4b9a5c4a288c53ce6b5b835f9cb843a521604eab7896d8bfefb3eb965a1d2",
+      "bytes": 30525
     }
   ],
   "component_files": [
@@ -252,6 +257,125 @@
       "bundle_path": "components/CC_public_code_stage2/validation/STAGE2_V2_FAIL_REPORT.txt",
       "sha256": "957ba6a45e2e2648c661e4c176357425a1b5ee54a11b74258df372616d018a03",
       "bytes": 514
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/README.md",
+      "bundle_path": "components/CC_public_code_stage3/README.md",
+      "sha256": "e23f3dafc05b9582df5857bffc6d14b986ab52912300a8fd8a06c01b6990b726",
+      "bytes": 3655
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/README_JA.txt",
+      "bundle_path": "components/CC_public_code_stage3/README_JA.txt",
+      "sha256": "411bd4c0c2d619f5b024e3b038da07ad2856d3b875fb451403cf8d60809b84e5",
+      "bytes": 1578
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/SHA256SUMS.txt",
+      "bundle_path": "components/CC_public_code_stage3/SHA256SUMS.txt",
+      "sha256": "283682d718cd6e4e0e888eefadb6f851790d163455cbd0741d738621c137ca93",
+      "bytes": 1555
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/dependencies/cc_public_group_ops.m",
+      "bundle_path": "components/CC_public_code_stage3/dependencies/cc_public_group_ops.m",
+      "sha256": "b9813209cf8fad22d1ff53cee6605c52969854206f423ae97ef3e6cc6b94a858",
+      "bytes": 10857
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/dependencies/cc_synthetic_group_fixture.m",
+      "bundle_path": "components/CC_public_code_stage3/dependencies/cc_synthetic_group_fixture.m",
+      "sha256": "0f50c271c48c7de2521444a746474ca0e83c56cb3d9624d5eba31936fd6c650a",
+      "bytes": 3356
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/AUTHORING_CHECKS.json",
+      "bundle_path": "components/CC_public_code_stage3/docs/AUTHORING_CHECKS.json",
+      "sha256": "e1eb3a90ebf55021927679703bbd71395fe8b4743d294822697b4d441ac6c444",
+      "bytes": 788
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/INPUTS_AND_LIMITS.md",
+      "bundle_path": "components/CC_public_code_stage3/docs/INPUTS_AND_LIMITS.md",
+      "sha256": "55b5204e055eeca3f49f15ba32131a99d3a3cdd3f8c5d2160e99c05e34829d3b",
+      "bytes": 2442
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/PATCH_V2.md",
+      "bundle_path": "components/CC_public_code_stage3/docs/PATCH_V2.md",
+      "sha256": "0df28aace2757c413f5bf93758fa3452a48194f99e3cff8e8d498ae4fe1ef904",
+      "bytes": 2874
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/PATCH_V2_CHECKS.json",
+      "bundle_path": "components/CC_public_code_stage3/docs/PATCH_V2_CHECKS.json",
+      "sha256": "f8a47754c895d85c3a19ca95dc96c84fc5cfc2bcdd3dc8772018d8ad1d917727",
+      "bytes": 1244
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/SOURCE_EXCERPT_HASHES.json",
+      "bundle_path": "components/CC_public_code_stage3/docs/SOURCE_EXCERPT_HASHES.json",
+      "sha256": "5c37b76e320a4b5f0835aa73d324c1ce832b37ec05664c9bdd6b713d98a1c52a",
+      "bytes": 1250
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/SOURCE_PROVENANCE.md",
+      "bundle_path": "components/CC_public_code_stage3/docs/SOURCE_PROVENANCE.md",
+      "sha256": "b72ebc0d83601c720a90b40ec3d3d1ce13b6e2ca8acd556d483d10eeafcf10fc",
+      "bytes": 4520
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/source_excerpts/bootstrap_resampling_loop.txt",
+      "bundle_path": "components/CC_public_code_stage3/docs/source_excerpts/bootstrap_resampling_loop.txt",
+      "sha256": "ee8e2fd85d768916f02802373b6b7974642fa5f98979b57c773d6ac3f6af4114",
+      "bytes": 2293
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/source_excerpts/logit_transform_and_model.txt",
+      "bundle_path": "components/CC_public_code_stage3/docs/source_excerpts/logit_transform_and_model.txt",
+      "sha256": "14fb1878533aabfe346b17fec98caf9a0314e6d408885ca4aa2e645eded71705",
+      "bytes": 797
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/source_excerpts/loo_exact_time.txt",
+      "bundle_path": "components/CC_public_code_stage3/docs/source_excerpts/loo_exact_time.txt",
+      "sha256": "22ea1db2d755807df8ac5045dd857db13bccf9c4bff921abc0ec8e0b5c92030e",
+      "bytes": 1280
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/docs/source_excerpts/loo_primary_region.txt",
+      "bundle_path": "components/CC_public_code_stage3/docs/source_excerpts/loo_primary_region.txt",
+      "sha256": "21c981a2346ca78bf6a9741c65ebb2d77428b889b21fab4b75d4ed3598da8a64",
+      "bytes": 1921
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/run_synthetic_sensitivity_demo.m",
+      "bundle_path": "components/CC_public_code_stage3/run_synthetic_sensitivity_demo.m",
+      "sha256": "2652add9df29e869f5d63893e318f6c4d65c1074a0968b2a7206b69275e7a389",
+      "bytes": 15486
+    },
+    {
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "source_member": "CC_public_code_stage3/src/cc_wtc_sensitivity.m",
+      "bundle_path": "components/CC_public_code_stage3/src/cc_wtc_sensitivity.m",
+      "sha256": "2489f2462f752ed948d8b3831bb17977814bfa740c0a373f887200d26d327307",
+      "bytes": 13901
     }
   ],
   "latest_author_supplied_runtime_reports": [
@@ -266,7 +390,19 @@
       "bundle_path": "validation/stage2_v3_pass_report.txt",
       "sha256": "307fa4a62e4c5108c13f2cd680ba4062ac87cdd86e6bed7ded21dd437afaaf2b",
       "bytes": 2684
+    },
+    {
+      "uploaded_filename": "SHARE_STAGE3_REPORT(1).txt",
+      "bundle_path": "validation/stage3_v2_pass_report.txt",
+      "sha256": "7177fbd4e849f8651c14db1176b38ea6a77f3f060dc0724d5b58f853a7ca09f1",
+      "bytes": 1790
     }
   ],
-  "evidence_limit": "PASS reports cover synthetic component tests, not clinical or end-to-end reproduction."
+  "evidence_limit": "PASS reports cover synthetic component tests, not clinical or end-to-end reproduction.",
+  "update_base": {
+    "archive_name": "CC_GitHub_private_stage12.zip",
+    "sha256": "1e14b164e41e5a347626f0dd4c3a6d5fb68f6cb2833a0e752359d2b2e688ca8f",
+    "stage1_and_stage2_component_bytes_changed": false,
+    "live_github_repository_fetched": false
+  }
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "file": "docs/source_excerpts/loo_primary_region.txt",
+    "source": "uploaded command history",
+    "source_lines": [
+      3566,
+      3628
+    ],
+    "sha256": "21c981a2346ca78bf6a9741c65ebb2d77428b889b21fab4b75d4ed3598da8a64",
+    "kind": "exact text range; not a complete runnable source"
+  },
+  {
+    "file": "docs/source_excerpts/loo_exact_time.txt",
+    "source": "uploaded command history",
+    "source_lines": [
+      3757,
+      3805
+    ],
+    "sha256": "22ea1db2d755807df8ac5045dd857db13bccf9c4bff921abc0ec8e0b5c92030e",
+    "kind": "exact text range; not a complete runnable source"
+  },
+  {
+    "file": "docs/source_excerpts/logit_transform_and_model.txt",
+    "source": "uploaded command history",
+    "source_lines": [
+      6358,
+      6378
+    ],
+    "sha256": "14fb1878533aabfe346b17fec98caf9a0314e6d408885ca4aa2e645eded71705",
+    "kind": "exact text range; not a complete runnable source"
+  },
+  {
+    "file": "docs/source_excerpts/bootstrap_resampling_loop.txt",
+    "source": "run_cluster_bootstrap_sensitivity.m",
+    "source_lines": [
+      129,
+      228
+    ],
+    "sha256": "ee8e2fd85d768916f02802373b6b7974642fa5f98979b57c773d6ac3f6af4114",
+    "kind": "exact text range; not a complete runnable source"
+  }
+]

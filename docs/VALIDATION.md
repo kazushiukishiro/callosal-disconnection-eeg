@@ -1,9 +1,9 @@
-# Validation record for the private stage-1/stage-2 snapshot
+# Validation record for the private stage-1/stage-2/stage-3 snapshot
 
 ## Evidence
 
-The evidence is the two author-supplied runtime reports in `../validation/`.
-Both report MATLAB 26.1.0.3312084 (R2026a) Update 4. The reports contain no run
+The evidence is the three author-supplied runtime reports in `../validation/`.
+All report MATLAB 26.1.0.3312084 (R2026a) Update 4. The reports contain no run
 timestamp, operating-system field, raw output matrices, or complete console log;
 those details are not inferred. `STATUS: PASS` is the driver's reported outcome,
 not independent certification of the numerical implementation or biology.
@@ -41,22 +41,49 @@ as 0-by-0, unequal directly but equal after column-vector conversion. The v3
 selection boundary checks passed; the earlier v2 failure report remains only as
 historical evidence inside the component snapshot.
 
+## Stage 3 sensitivity v2
+
+The author-supplied report records STATUS: PASS for stage3-sensitivity-v2.
+The fixture contains 24 fictional subjects, 469 regional summaries and 190
+exact-time summaries. Checks cover package integrity/function resolution,
+the natural-log function in the report-writing workspace, logit boundaries,
+duplicate rejection, missing-pair rejection and distinct bootstrap cluster IDs
+when one subject is drawn repeatedly.
+
+The report records successful logit transform/model checks, explicit
+Satterthwaite F tests versus Residual coefficients, and 72 leave-one-out fits
+with independent checks of subject/observation deletion. No effect direction
+or significance threshold was used as a pass criterion.
+
+Fifty bootstrap draws were requested: 50 primary and 50 exact-time fits
+succeeded. Failed fits, fits with recorded warnings and baseline warnings are
+all reported as zero. Draw pairing, percentile construction, failure accounting
+and RNG restoration checks passed. The monitor records only the last warning
+per fit/test; this is not an exhaustive convergence-diagnostics record.
+
+The test uses newly generated artificial summary tables and callable wrappers,
+not byte-identical historical clinical scripts. The 50-resample percentile
+intervals are not the manuscript's confidence intervals. The full 2000-resample
+run and original-versus-wrapper clinical numerical equivalence were not tested.
+
 ## Not established
 
 These reports do not establish end-to-end EDF-to-cohort reproduction, equality
 with saved clinical outputs, biological validity, or a validated clinical tool.
-Stage 2 uses freshly generated summary tables, not stage-1 outputs.
+Stages 2 and 3 use freshly generated summary tables, not stage-1 outputs.
 
 The reports explicitly do not cover native 1000/2000-Hz EDFs, all possible
 artefacts/missing-data patterns, real-cohort exclusions/private manifest,
-leave-one-out refits, the refitted patient-cluster bootstrap, modifier LMMs,
+the full 2000-resample patient-cluster bootstrap run, modifier LMMs,
 clinical rank tests, postoperative outcome eligibility, or figure export.
 
 ## Packaging check performed for this snapshot
 
-All 34 source-package files, including 16 MATLAB files, were copied byte for byte
-from the stage-1 ZIP and stage-2 v3 ZIP. Both original internal manifests were
-verified during assembly. The two PASS reports were copied verbatim. The outer
+All 51 source-package files, including 20 MATLAB files, were copied byte for byte
+from the stage-1 ZIP, stage-2 v3 ZIP and stage-3 sensitivity v2 ZIP. All three
+internal manifests were verified during assembly. The three PASS reports were
+copied verbatim. The stage-1 and stage-2 component directories are unchanged
+from the earlier private snapshot. The outer
 README, exclusion rules, newline-preservation rule, validation record, coverage
 map and package inventory are new documentation/packaging files, not historical
 study scripts. No MATLAB analysis function or test criterion was modified.

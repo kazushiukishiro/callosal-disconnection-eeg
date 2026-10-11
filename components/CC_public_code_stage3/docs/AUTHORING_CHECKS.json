@@ -1,0 +1,26 @@
+{
+  "historical_bootstrap_source_sha256": "6a8f1dac6d46d0fe40c6dc2a3eff58b195a8851c17da0af5d427b98bb6e3a995",
+  "lexical_checks": [
+    {
+      "file": "run_synthetic_sensitivity_demo.m",
+      "lexical_delimiters_balanced": true
+    },
+    {
+      "file": "dependencies/cc_public_group_ops.m",
+      "lexical_delimiters_balanced": true
+    },
+    {
+      "file": "dependencies/cc_synthetic_group_fixture.m",
+      "lexical_delimiters_balanced": true
+    },
+    {
+      "file": "src/cc_wtc_sensitivity.m",
+      "lexical_delimiters_balanced": true
+    }
+  ],
+  "unchanged_stage2_dependencies": true,
+  "matlab_runtime_executed": false,
+  "lexical_check_is_not_a_matlab_parser": true,
+  "clinical_sources_read_by_demo": false,
+  "new_wrapper_clinical_output_equivalence_verified": false
+}

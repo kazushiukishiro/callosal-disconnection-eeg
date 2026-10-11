@@ -1,0 +1,100 @@
+    %% Sample patients with replacement
+    idx = randi(nCases,nCases,1);
+    sampledCases = cases(idx);
+
+    %% -----------------------------------------------------
+    % Build bootstrap PRIMARY dataset
+    % Duplicate patients need new cluster IDs
+    % -----------------------------------------------------
+
+    Tb = table;
+
+    for j = 1:nCases
+
+        q = wtc32(wtc32.CaseNo == sampledCases{j},:);
+
+        % new bootstrap cluster ID
+        q.BootCase = categorical( ...
+            repmat("B"+string(j),height(q),1));
+
+        % region nested within new bootstrap patient
+        q.BootCaseRegion = categorical( ...
+            string(q.BootCase) + "_" + string(q.Region));
+
+        Tb = [Tb; q];
+
+    end
+
+    try
+
+        mb = fitlme( ...
+            Tb, ...
+            ['mean_MeanWTC_4_13 ~ State + Region + ' ...
+             '(1|BootCase) + (1|BootCaseRegion)']);
+
+        Cb = mb.Coefficients;
+
+        bootAnterior(b) = ...
+            Cb.Estimate(strcmp(Cb.Name,'State_Anterior'));
+
+        bootPosterior(b) = ...
+            Cb.Estimate(strcmp(Cb.Name,'State_Posterior'));
+
+        bootPost(b) = ...
+            Cb.Estimate(strcmp(Cb.Name,'State_Post'));
+
+    catch
+
+        failedPrimary(b) = true;
+
+    end
+
+
+    %% -----------------------------------------------------
+    % Build bootstrap EXACT dataset
+    % -----------------------------------------------------
+
+    Teb = table;
+
+    for j = 1:nCases
+
+        q = exactPatient( ...
+            exactPatient.CaseNo == sampledCases{j},:);
+
+        q.BootCase = categorical( ...
+            repmat("B"+string(j),height(q),1));
+
+        Teb = [Teb; q];
+
+    end
+
+    try
+
+        meb = fitlme( ...
+            Teb, ...
+            'MeanWTC ~ State*ConnectionType + (1|BootCase)');
+
+        Ceb = meb.Coefficients;
+
+        bootExactAnterior(b) = ...
+            Ceb.Estimate(strcmp( ...
+            Ceb.Name, ...
+            'State_Anterior:ConnectionType_Inter'));
+
+        bootExactPosterior(b) = ...
+            Ceb.Estimate(strcmp( ...
+            Ceb.Name, ...
+            'State_Posterior:ConnectionType_Inter'));
+
+        bootExactPost(b) = ...
+            Ceb.Estimate(strcmp( ...
+            Ceb.Name, ...
+            'State_Post:ConnectionType_Inter'));
+
+    catch
+
+        failedExact(b) = true;
+
+    end
+
+end

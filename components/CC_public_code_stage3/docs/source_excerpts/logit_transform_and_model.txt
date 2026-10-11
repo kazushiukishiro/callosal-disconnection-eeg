@@ -1,0 +1,21 @@
+% 4. Logit transform WTC
+%% ------------------------------------------------------------
+y = T.mean_MeanWTC_4_13;
+fprintf('\nObserved WTC range: %.10f to %.10f\n', ...
+min(y),max(y));
+% Guard against exact 0 or 1 only
+epsVal = 1e-6;
+nLow  = sum(y <= epsVal);
+nHigh = sum(y >= 1-epsVal);
+fprintf('Values clipped at lower bound: %d\n',nLow);
+fprintf('Values clipped at upper bound: %d\n',nHigh);
+yBound = min(max(y,epsVal),1-epsVal);
+T.LogitWTC = log(yBound ./ (1-yBound));
+%% ------------------------------------------------------------
+% 5. Fit identical mixed model on logit scale
+%% ------------------------------------------------------------
+mLogit = fitlme( ...
+T, ...
+['LogitWTC ~ State + Region + ' ...
+'(1|CaseNo) + (1|CaseNo:Region)']);
+aLogit = anova(mLogit,'DFMethod','Satterthwaite');
