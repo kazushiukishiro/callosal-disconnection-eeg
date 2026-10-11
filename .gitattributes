@@ -1,0 +1,4 @@
+# Preserve the checksum-verified component snapshots byte for byte.
+# -text disables Git line-ending conversion; it does not change code behavior.
+# GitHub browser uploads do not apply .gitattributes transformations.
+* -text

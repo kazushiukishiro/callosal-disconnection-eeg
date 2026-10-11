@@ -1,4 +1,4 @@
-# Research data and private working directories
+# Research records and local working directories: never add to this repository.
 data_raw/
 data_interim/
 data_processed/
@@ -7,11 +7,11 @@ events/
 results/
 output/
 outputs/
+group_demo_output/
 logs/
 LOCAL_ONLY/
 
-# Clinical data and saved model containers
-# Reviewed synthetic examples may be allowed explicitly later.
+# Patient-data containers and locally generated synthetic output.
 *.[eE][dD][fF]
 *.[bB][dD][fF]
 *.[mM][aA][tT]
@@ -23,31 +23,32 @@ LOCAL_ONLY/
 *.[dD][cC][mM]
 *.nii
 *.nii.gz
-
-# Archives and live scripts may contain embedded data or outputs
+*.fig
+*.mlx
 *.zip
 *.7z
 *.rar
-*.mlx
 
-# Local configuration, credentials and private records
+# Private paths, histories and credentials.
 .env
 .env.*
 *.pem
 *.key
 config_local.m
 LOCAL_INPUT_PATHS.txt
+LOCAL_DIAGNOSTICS.txt
 history.m
 History.xml
 command_history*
 matlab_history*
 
-# MATLAB temporary files
+# MATLAB / operating-system temporary files.
 *.asv
 *.m~
 matlab_crash_dump*
-
-# Operating-system temporary files
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# .gitignore is not a privacy scanner or a browser-upload safeguard.
+# Review every added file. Never put private data in source-code literals.
