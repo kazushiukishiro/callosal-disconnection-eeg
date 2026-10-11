@@ -1,0 +1,53 @@
+# Research data and private working directories
+data_raw/
+data_interim/
+data_processed/
+metadata/
+events/
+results/
+output/
+outputs/
+logs/
+LOCAL_ONLY/
+
+# Clinical data and saved model containers
+# Reviewed synthetic examples may be allowed explicitly later.
+*.[eE][dD][fF]
+*.[bB][dD][fF]
+*.[mM][aA][tT]
+*.[xX][lL][sS]
+*.[xX][lL][sS][xX]
+*.[xX][lL][sS][mM]
+*.[cC][sS][vV]
+*.[tT][sS][vV]
+*.[dD][cC][mM]
+*.nii
+*.nii.gz
+
+# Archives and live scripts may contain embedded data or outputs
+*.zip
+*.7z
+*.rar
+*.mlx
+
+# Local configuration, credentials and private records
+.env
+.env.*
+*.pem
+*.key
+config_local.m
+LOCAL_INPUT_PATHS.txt
+history.m
+History.xml
+command_history*
+matlab_history*
+
+# MATLAB temporary files
+*.asv
+*.m~
+matlab_crash_dump*
+
+# Operating-system temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
