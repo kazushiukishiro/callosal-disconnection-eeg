@@ -1,5 +1,3 @@
-# callosal-disconnection-eeg
-MATLAB code for intraoperative EEG connectivity analysis during sequential corpus callosal disconnection.
 # Callosal disconnection EEG analysis
 
 MATLAB analysis code accompanying the manuscript:
