@@ -13,10 +13,29 @@
 | Primary/exact-time connectivity-change definitions | Newly packaged source-separation function | Artificial missing-pair and source-subset checks |
 | Final-cohort exclusions and initial cohort assembly | Not assembled as a clinical release workflow | Must use an explicitly documented interface for a private manifest; never copy patient identifiers into public source |
 | LOO, refitted patient-cluster bootstrap, logit sensitivity | Stage-3 v2 callable wrappers with historical source excerpts | Stage-3 PASS for logit, 72 LOO fits and 50 bootstrap draws per paired model family; not clinical-output equivalence or the full 2000-resample run |
-| Modifier LMMs, clinical rank tests, outcome eligibility | Not assembled in this snapshot | Need final-source mapping and declared validation status |
+| Modifier LMMs and clinical rank tests | Stage-4 callable wrappers, explicit source routing and extracted modifier reference blocks | Stage-4 PASS: 28 routed tests, five ML models, artificial source-block agreement; not real-cohort reproduction |
+| Outcome eligibility and historical MRI-laterality route | Not established by the synthetic tests | Outcome inputs must be eligibility-masked upstream; laterality routes are explicitly labelled, not inferred |
 | Manuscript Figures 2-5, including matched Figure 4 v3 | Not included | Preserve the final source-data/plotting relationship; do not substitute old Figure 4 code |
 
-## Next step after private upload
+## Remaining stages in the agreed six-stage plan
+
+**Stage 4 closes with storage of the tested clinical component and its PASS
+report.** No component test needs to be rerun just to store identical bytes.
+
+**Stage 5: final assembly and bounded verification.** Resolve the remaining
+source/figure-export coverage, document which code is original and which is
+adapted, finalize input/provenance/validation documentation, and review the
+actual release upload set for private data and stale files. Finalize license
+and software-creator/citation information with the rights holder. Verify the
+repository snapshot and check newly added or changed paths as appropriate.
+Do not label absent or untested workflow elements as supplied or verified.
+
+**Stage 6: public release and archive.** Only after stage-5 gates are resolved,
+make the intended code snapshot public, archive the specific software version,
+confirm its DOI is accessible, and update the manuscript availability statement.
+No public release or DOI is created by this stage-4 storage update.
+
+## Stage-5 source assembly details
 
 Finish a source-to-manuscript map for the remaining final scripts. Separate
 unchanged historical numerical code from new wrappers, synthetic fixtures and
@@ -24,7 +43,7 @@ plotting changes. Include public input schemas and a private-manifest interface,
 not actual clinical records. New or adapted code needs an appropriate check;
 previous PASS reports must not be carried forward as proof of modified code.
 
-There is no need to repeat the three unchanged component tests merely to store this
+There is no need to repeat the four unchanged component tests merely to store this
 snapshot. Their evidence is preserved. Untested features must be labelled as
 untested; missing workflows must not be described as included.
 

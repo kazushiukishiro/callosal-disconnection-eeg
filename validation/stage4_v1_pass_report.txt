@@ -1,0 +1,26 @@
+CC PUBLIC CODE - STAGE 4 SYNTHETIC CLINICAL TEST
+STATUS: PASS
+MATLAB: 26.1.0.3312084 (R2026a) Update 4
+PACKAGE: stage4-clinical-v1
+New in-memory clinical wrappers plus extracted historical numerical blocks.
+Only artificial summary tables and covariates are used.
+No clinical findings, thresholds of significance or direction are test targets.
+PASS: package integrity and explicit function resolution
+FIXTURE: 24 fictional covariate rows; 24 joined subjects; 469 primary regional rows
+PASS: independent reconstruction of all five primary/exact-time change measures
+PASS: duplicate keys, invalid coding, Inf and inconsistent MRI codes rejected
+PASS: small exact-rank example, constant/missing inputs and unavailable groups
+PASS: 28 explicitly routed tests; N, medians, statistics and native MATLAB P values
+PASS: independent tied-rank Spearman rho, group-0 rank sums and tie-corrected KW statistics
+Laterality outputs retain both explicitly labelled primary/exact-time routes; no clinical route inferred.
+PASS: five ML modifier fits (onset, surgery age, duration, joint, standardized joint)
+PASS: source-block agreement on synthetic centering, five models, coefficients, CIs, F/P and observation counts
+PASS: joined-regional-row centering and unique-patient covariate correlations preserved
+PASS: Satterthwaite omnibus F-tests distinguished from Residual coefficient tests/CIs
+WARNINGS: wrapper fits=0; reference fits=0
+Warning monitoring records only the last warning per test/fit; warnings are not suppressed.
+NOT TESTED: real clinical outputs, real exclusions, follow-up eligibility, native-rate EDFs or figure export.
+The test consumes summaries, not the stage-1 EDF output. It is not end-to-end clinical reproduction.
+All outcome inputs are already masked for eligibility by the caller; no dates are read or eligibility inferred.
+No study data, clinical expected numbers or previously reported P values were used.
+A PASS is bounded software-test evidence, not complete manuscript reproducibility.

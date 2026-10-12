@@ -1,0 +1,48 @@
+{
+  "matlab_runtime_executed": false,
+  "matlab_parser_used": false,
+  "checks": [
+    {
+      "path": "run_synthetic_clinical_demo.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "src/cc_clinical_modifier_models.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "src/cc_clinical_test_plan.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "src/cc_join_clinical_inputs.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "src/cc_synthetic_clinical_fixture.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "src/cc_clinical_rank_tests.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "dependencies/cc_connectivity_change_sources.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "dependencies/cc_synthetic_group_fixture.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "dependencies/cc_public_group_ops.m",
+      "delimiter_and_block_balance": true
+    },
+    {
+      "path": "reference/cc_modifier_reference_blocks.m",
+      "delimiter_and_block_balance": true
+    }
+  ],
+  "source_blocks_equal": true,
+  "custom_callees_present": true
+}

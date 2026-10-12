@@ -1,0 +1,76 @@
+[
+  {
+    "file": "dependencies/cc_connectivity_change_sources.m",
+    "source": "stage2-v3/src/cc_connectivity_change_sources.m",
+    "sha256": "a3f1e9401a19dd45851c574c0b141b735d6cc4ecc14a3e5610310a039f895e7b",
+    "status": "byte-identical dependency"
+  },
+  {
+    "file": "dependencies/cc_synthetic_group_fixture.m",
+    "source": "stage2-v3/src/cc_synthetic_group_fixture.m",
+    "sha256": "0f50c271c48c7de2521444a746474ca0e83c56cb3d9624d5eba31936fd6c650a",
+    "status": "byte-identical dependency"
+  },
+  {
+    "file": "dependencies/cc_public_group_ops.m",
+    "source": "stage2-v3/src/cc_public_group_ops.m",
+    "sha256": "b9813209cf8fad22d1ff53cee6605c52969854206f423ae97ef3e6cc6b94a858",
+    "status": "byte-identical dependency"
+  },
+  {
+    "source": "run_FINAL_QC_clean_effect_modifiers.m",
+    "sha256": "3402c4deda8003bfe1c50b3088d9325ab933f9099f3739c880bdce6f29de9fe6",
+    "reference_file": "reference/cc_modifier_reference_blocks.m",
+    "line_spans": [
+      [
+        50,
+        62
+      ],
+      [
+        77,
+        80
+      ],
+      [
+        86,
+        86
+      ],
+      [
+        94,
+        97
+      ],
+      [
+        103,
+        103
+      ],
+      [
+        111,
+        114
+      ],
+      [
+        120,
+        120
+      ],
+      [
+        128,
+        132
+      ],
+      [
+        138,
+        138
+      ],
+      [
+        146,
+        150
+      ],
+      [
+        156,
+        156
+      ],
+      [
+        164,
+        173
+      ]
+    ],
+    "status": "extracted numerical blocks; function wrapping and warning capture added; no clinical IO"
+  }
+]

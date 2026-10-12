@@ -1,8 +1,8 @@
-# Validation record for the private stage-1/stage-2/stage-3 snapshot
+# Validation record for the private stage-1/stage-2/stage-3/stage-4 snapshot
 
 ## Evidence
 
-The evidence is the three author-supplied runtime reports in `../validation/`.
+The evidence is the four author-supplied runtime reports in `../validation/`.
 All report MATLAB 26.1.0.3312084 (R2026a) Update 4. The reports contain no run
 timestamp, operating-system field, raw output matrices, or complete console log;
 those details are not inferred. `STATUS: PASS` is the driver's reported outcome,
@@ -66,24 +66,59 @@ not byte-identical historical clinical scripts. The 50-resample percentile
 intervals are not the manuscript's confidence intervals. The full 2000-resample
 run and original-versus-wrapper clinical numerical equivalence were not tested.
 
+## Stage 4 clinical v1
+
+The author-supplied SHARE_STAGE4_REPORT.txt records STATUS: PASS for
+stage4-clinical-v1 on the same MATLAB version. The fixture has 24 fictional
+covariate rows, 24 joined subjects and 469 primary regional rows. These counts
+are fixture descriptions, not study inclusion criteria.
+
+The report records package integrity/function resolution, independent
+reconstruction of all five primary/exact-time change measures, rejection of
+duplicate keys/invalid coding/infinite values/inconsistent MRI codes, and checks
+for small exact-rank examples, constant or missing inputs and unavailable groups.
+
+Twenty-eight explicitly source-routed tests passed comparisons of N, medians,
+statistics and native MATLAB P values. Independent checks covered tied-rank
+Spearman rho, group-0 rank sums and tie-corrected Kruskal-Wallis statistics.
+Both primary and exact-time laterality routes remain labelled; the report does
+not identify which produced the historical clinical laterality table.
+
+Five ML modifier fits (onset, surgery age, duration, joint and standardized
+joint) passed. The report records agreement with extracted source blocks for
+synthetic centering, the five models, coefficients, CIs, F/P values and
+observation counts. Joined-regional-row centering and unique-patient covariate
+correlations were preserved. Satterthwaite omnibus tests were distinguished from
+Residual coefficient tests/CIs. These are agreement checks at the tolerances
+specified in the component documentation, not a claim of real-cohort equivalence.
+
+Wrapper-fit and reference-fit recorded warning counts were both zero. Monitoring
+records only the last warning per test/fit; it is not an exhaustive diagnostic
+record. The stage consumes artificial summaries, not stage-1 EDF outputs. Outcome
+inputs are already eligibility-masked by the caller; no dates are inspected and
+no real follow-up eligibility is verified. Clinical significance or effect
+direction is not a test-success criterion.
+
 ## Not established
 
 These reports do not establish end-to-end EDF-to-cohort reproduction, equality
 with saved clinical outputs, biological validity, or a validated clinical tool.
-Stages 2 and 3 use freshly generated summary tables, not stage-1 outputs.
+Stages 2, 3 and 4 use freshly generated summary tables, not stage-1 outputs.
 
 The reports explicitly do not cover native 1000/2000-Hz EDFs, all possible
 artefacts/missing-data patterns, real-cohort exclusions/private manifest,
-the full 2000-resample patient-cluster bootstrap run, modifier LMMs,
-clinical rank tests, postoperative outcome eligibility, or figure export.
+the full 2000-resample patient-cluster bootstrap run, original-versus-wrapper
+real-cohort numerical equivalence, postoperative outcome eligibility, or figure
+export. Clinical-modifier and rank-test coverage is limited to the stage-4
+artificial inputs and checks described above.
 
 ## Packaging check performed for this snapshot
 
-All 51 source-package files, including 20 MATLAB files, were copied byte for byte
-from the stage-1 ZIP, stage-2 v3 ZIP and stage-3 sensitivity v2 ZIP. All three
-internal manifests were verified during assembly. The three PASS reports were
-copied verbatim. The stage-1 and stage-2 component directories are unchanged
-from the earlier private snapshot. The outer
+All 69 component files, including 30 MATLAB files, retain the bytes from the
+stage-1 ZIP, stage-2 v3 ZIP, stage-3 sensitivity v2 ZIP and stage-4 clinical v1 ZIP.
+All four internal manifests were verified during assembly. The four PASS reports
+are retained verbatim. Stage-1, stage-2 and stage-3 component directories are
+unchanged from the previously assembled private snapshot. The outer
 README, exclusion rules, newline-preservation rule, validation record, coverage
 map and package inventory are new documentation/packaging files, not historical
 study scripts. No MATLAB analysis function or test criterion was modified.

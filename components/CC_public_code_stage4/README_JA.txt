@@ -1,0 +1,20 @@
+第4段階：臨床modifier・順位検定の合成データ試験
+
+実行入口：run_synthetic_clinical_demo.m
+患者EDF、COREのMAT、臨床Excelを選択する操作はありません。
+新しい架空の集計表と臨床変数だけを使用します。
+第1〜第3段階の実行入口は呼び出しません。
+
+動作確認は、入力の出所別結合、Spearman相関・順位和・Kruskal-Wallis、
+5種類のmodifier LMM、および元コードから抽出した数値処理との合成入力上の比較です。
+MRI lateralityでは、primaryとexact-timeの両経路を区別して出力します。
+この試験だけで実患者のSupplementary Table 5Cの出所を確定しません。
+
+出力フォルダー：clinical_demo_output/配下の毎回新しいフォルダー
+送付するファイル：SHARE_STAGE4_REPORT.txt のみ
+LOCAL_DIAGNOSTICS.txtはローカルパスが含まれる場合があるため送付不要です。
+合成出力のCSVを論文に転記しないでください。
+
+配布前にMATLAB本体では実行していません。PASSになるまでは動作確認済みとしません。
+PASSでも32例の臨床結果の再現、追跡適格性、全解析の再現確認ではありません。
+今回はGitHubへまだアップロードせず、実行レポートを確認します。
