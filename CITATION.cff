@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: >-
+  Please cite this software and, when available, the version-specific
+  Zenodo record linked from its GitHub release.
+type: software
+title: "Callosal disconnection EEG analysis"
+authors:
+  - family-names: "Ukishiro"
+    given-names: "Kazushi"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/kazushiukishiro/callosal-disconnection-eeg"
+url: "https://github.com/kazushiukishiro/callosal-disconnection-eeg"
+abstract: >-
+  MATLAB source functions and refactored analysis components for intraoperative
+  EEG connectivity analysis during sequential corpus callosal disconnection,
+  with synthetic component demonstrations and bounded validation records.
+  Supplementary sources include the matched Figure 4 plotting function and
+  a supplied residual-splenium analysis function. Patient-level data and a
+  complete end-to-end clinical reproduction workflow are not distributed.
+keywords:
+  - EEG
+  - corpus callosotomy
+  - wavelet coherence
+  - MATLAB
+  - functional connectivity
+  - synthetic demonstrations

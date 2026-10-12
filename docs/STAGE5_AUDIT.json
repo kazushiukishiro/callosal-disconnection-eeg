@@ -1,0 +1,113 @@
+{
+  "review_type": "stage5-source-tree-audit-and-metadata-preparation",
+  "input_archive_name": "callosal-disconnection-eeg-main.zip",
+  "input_archive_sha256": "f8facb46ea436ec67a32446833067c4112c1aee3739d817935fc7f39ee7d2a53",
+  "archive_commit_comment": "ed6ee982f5f145da43944ec09d7f7de8e309b133",
+  "input_files": 82,
+  "component_files": 69,
+  "component_matlab_files": 30,
+  "checksums": {
+    "PACKAGE_SHA256SUMS.txt": {
+      "checked": 81,
+      "matched": 81
+    },
+    "components/CC_public_code_stage1/SHA256SUMS.txt": {
+      "checked": 16,
+      "matched": 16
+    },
+    "components/CC_public_code_stage2/SHA256SUMS.txt": {
+      "checked": 16,
+      "matched": 16
+    },
+    "components/CC_public_code_stage3/SHA256SUMS.txt": {
+      "checked": 16,
+      "matched": 16
+    },
+    "components/CC_public_code_stage4/SHA256SUMS.txt": {
+      "checked": 17,
+      "matched": 17
+    }
+  },
+  "source_archive_comparisons": [
+    {
+      "stage": 1,
+      "source_archive": "CC_public_code_stage1.zip",
+      "files": 17,
+      "m_files": 11,
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    {
+      "stage": 2,
+      "source_archive": "CC_public_code_stage2_v3.zip",
+      "files": 17,
+      "m_files": 5,
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    {
+      "stage": 3,
+      "source_archive": "CC_public_code_stage3_sensitivity_v2.zip",
+      "files": 17,
+      "m_files": 4,
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    {
+      "stage": 4,
+      "source_archive": "CC_public_code_stage4_clinical.zip",
+      "files": 18,
+      "m_files": 10,
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  ],
+  "reports_match_author_uploads": 4,
+  "static_review": {
+    "all_input_files_decode_as_utf8_text": true,
+    "bundled_clinical_data_containers_or_images_found": false,
+    "recognized_secret_or_local_path_pattern_findings": [],
+    "historical_failure_reports_preserved_and_distinguished": true,
+    "git_history_reviewed": false,
+    "limit": "Current supplied tree, textual review and selected patterns only; not a privacy/legal guarantee."
+  },
+  "license": {
+    "spdx": "MIT",
+    "copyright_notice": "Copyright (c) 2026 Kazushi Ukishiro",
+    "basis": "explicit rights-holder instruction in this conversation"
+  },
+  "software_creators": [
+    {
+      "given_names": "Kazushi",
+      "family_names": "Ukishiro"
+    }
+  ],
+  "prepared_software_version": "1.0.0",
+  "published_release_created": false,
+  "zenodo_deposit_created": false,
+  "supplementary_sources": [
+    {
+      "path": "supplementary_code/figure4/make_figure4_matched_epoch_v3.m",
+      "source": "CC_Figure4_colours_v3.zip:CC_Figure4_colours_v3/make_figure4_matched_epoch_v3.m",
+      "bytes": 17575,
+      "sha256": "19005ab6a97b8f7224833aeb0545a0f340ce471e7d4e81c0d879b9ce3444853e",
+      "source_bytes_changed": false,
+      "new_matlab_runtime_test": false
+    },
+    {
+      "path": "supplementary_code/residual_splenium/analyze_residual_splenium_case.m",
+      "source": "analyze_residual_splenium_case.m",
+      "bytes": 26066,
+      "sha256": "6b351bac17999ef276283b0a7b20b353566c9d38ea1cc694c380c99899c0e539",
+      "source_bytes_changed": false,
+      "new_matlab_runtime_test": false
+    }
+  ],
+  "matlab_runtime_executed_during_packaging": false,
+  "scope": "Original source and refactored analysis components with synthetic demonstrations; not full clinical end-to-end reproduction.",
+  "citation_validation": "Parsed as YAML; required fields, supported key names and values checked against CFF 1.2.0 documentation. Not a full external CFF-validator run."
+}

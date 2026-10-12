@@ -126,3 +126,32 @@ study scripts. No MATLAB analysis function or test criterion was modified.
 No MATLAB runtime execution was performed in the packaging environment. Moving
 the intact component directories beneath a common parent preserves their relative
 layout, but does not itself provide a new runtime result.
+
+
+## Stage-5 archive and licensing review
+
+The author-supplied GitHub archive `callosal-disconnection-eeg-main.zip` had
+82 files. Its ZIP comment identified commit
+`ed6ee982f5f145da43944ec09d7f7de8e309b133`. All 81 entries in the root checksum
+manifest matched. All 69 files in the four component folders, including 30
+MATLAB files, matched the author-tested source ZIPs byte-for-byte. All four
+component manifests passed, and all four root PASS reports matched the supplied
+reports without modification.
+
+The review then added the authorized MIT License and creator citation metadata,
+updated release-scope documentation, and included two additional, unchanged
+supplied `.m` sources: matched Figure 4 colour v3 and residual-splenium analysis.
+These two functions are **not covered by the four component PASS reports**.
+No new MATLAB execution or figure export was performed during packaging.
+The final source tree contains the original 30 MATLAB files plus these two.
+
+All inspected files were text. No bundled patient EDF/MAT, clinical spreadsheet,
+CSV/TSV, image, local diagnostic log, private path or recognized credential
+pattern was found in the reviewed snapshot. Source literals and matched patterns
+were inspected; this is not a guarantee against all identifiers or a review of
+past commits. A GitHub source ZIP is not a Git-history audit.
+
+The root LICENSE supersedes preparation-time license-pending statements in
+unchanged snapshots. The retained statements are history, not alternative
+licensing terms. No clinical workflow or numerical clinical equivalence has
+been newly established by this packaging step.
